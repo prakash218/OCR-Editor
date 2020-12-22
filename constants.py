@@ -13,9 +13,6 @@ FG = '#0f4c75'
 TEXT = '#3282b8'
 SECONDARY = '#bbf1fa'
 
-# BG = '#303841'
-# FG = '#3a4750'
-# SECONDARY = '#00adb5'
-# TEXT = '#eeeeee'
+
 
 
