@@ -15,7 +15,7 @@ from os import remove,system
 import docx
 import unicodedata
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'Tesseract-OCR\tesseract.exe'
 root = Tk()
 
 
@@ -264,7 +264,7 @@ def open_file():
 def about():
 	system('start documentation.pdf')
 
-	
+
 thread = threading.Thread(target = refresh, daemon = True)
 thread.start()
 
@@ -316,7 +316,7 @@ original.grid(row = 2 , column = 1,padx = 30, pady = 30)
 edit = Label(root, image = img, bg= BG)
 edit.grid(row = 4, column = 1, pady = 30)
 
-Checkbutton(frame1, text = "Black and White:", font = ('Helvetica',20), bg = FG, fg = SECONDARY,activebackground = SECONDARY, activeforeground = FG,variable = black_and_white).grid(row = 1,sticky='w')
+Checkbutton(frame1, text = "Black and White:", font = ('Helvetica',20), bg = FG, fg = SECONDARY,activebackground = SECONDARY, activeforeground = BG,variable = black_and_white).grid(row = 1,sticky='w')
 Checkbutton(frame1, text = "Threshold:", font = ('Helvetica',20), bg = FG, fg = SECONDARY,activebackground = SECONDARY, activeforeground = FG,variable = threshold).grid(row = 2,sticky='w')
 
 
