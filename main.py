@@ -11,7 +11,7 @@ import numpy as np
 from shutil import copy
 from tkinter.filedialog import asksaveasfile
 from docx2pdf import convert
-from os import remove
+from os import remove,system
 import docx
 import unicodedata
 
@@ -261,7 +261,10 @@ def open_file():
     	filename = filename_copy
     	change_image(filename)
 	    
+def about():
+	system('start documentation.pdf')
 
+	
 thread = threading.Thread(target = refresh, daemon = True)
 thread.start()
 
@@ -289,14 +292,11 @@ file.add_separator()
 file.add_command(label="Exit", command=root.quit)  
   
 menubar.add_cascade(label="File", menu=file)  
-edit = Menu(menubar, tearoff=0)  
-edit.add_command(label="Undo")  
-  
-edit.add_separator()  
+ 
   
  
 help = Menu(menubar, tearoff=0)  
-help.add_command(label="About")  
+help.add_command(label="About", command = about)  
 menubar.add_cascade(label="Help", menu=help)  
 
 frame1 = Frame(root, bd = 5, relief = 'ridge', bg = FG)
