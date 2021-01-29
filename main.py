@@ -310,11 +310,11 @@ root.config(menu = menubar)
 Label(root, text = 'Original', font = ('Helvetica',36), bg = BG, fg = SECONDARY).grid(row = 1, column = 1) 
 Label(root, text = 'Edited', font = ('Helvetica',36), bg = BG, fg = SECONDARY).grid(row = 3, column = 1) 
 
-original = Label(root, image = img, bg= BG)
-original.grid(row = 2 , column = 1,padx = 30, pady = 30)
+original = Label(root, image = img, bg = SECONDARY, highlightthickness = 5, highlightbackground = FG)
+original.grid(row = 2 , column = 1,padx = 30, pady = 25)
 
-edit = Label(root, image = img, bg= BG)
-edit.grid(row = 4, column = 1, pady = 30)
+edit = Label(root, image = img, bg= SECONDARY, highlightthickness = 5, highlightbackground = SECONDARY)
+edit.grid(row = 4, column = 1, pady = 25)
 
 Checkbutton(frame1, text = "Black and White:", font = ('Helvetica',20), bg = FG, fg = SECONDARY,activebackground = SECONDARY, activeforeground = BG,variable = black_and_white).grid(row = 1,sticky='w')
 Checkbutton(frame1, text = "Threshold:", font = ('Helvetica',20), bg = FG, fg = SECONDARY,activebackground = SECONDARY, activeforeground = FG,variable = threshold).grid(row = 2,sticky='w')
